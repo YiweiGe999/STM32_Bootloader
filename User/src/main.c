@@ -23,6 +23,7 @@ void SysInit(void)
 	SysTick_Init();
 	ALED_vidInit();
 	AKEY_vidInit();
+  HFIC_UsartInit();
 }
 
 
@@ -31,10 +32,19 @@ void SysInit(void)
 int main(void)
 {
 	SysInit();
+	
+	printf("\n");
+	printf("\n");
+	printf(" ********************************************\n");
+	printf(" *                                          *\n");
+	printf(" *        System initialized complete!      *\n");
+	printf(" *                                          *\n");
+	printf(" ********************************************\n");
+	printf("\n");
+	printf("\n");
 	while(1)
 	{
 		TASK_vidScheduler();
-
 	}
 
 }

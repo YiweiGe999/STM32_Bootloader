@@ -11,8 +11,8 @@ static bool IsButtonPressdown(void);
 
 void BSP_KeyInit(void)
 {
-	EXTI_InitTypeDef   EXTI_InitStructure;
-	NVIC_InitTypeDef   NVIC_InitStructure;
+//	EXTI_InitTypeDef   EXTI_InitStructure;
+//	NVIC_InitTypeDef   NVIC_InitStructure;
 	GPIO_InitTypeDef KEY_strPortConfig;
 	
 	RCC_APB2PeriphClockCmd(KEY_RCC_PERIPHPORT, ENABLE); 	

@@ -4,15 +4,21 @@
 #include "bsp_led_cfg.h"
 #include "bsp_systick_cfg.h"
 #include "bsp_key_cfg.h"
+#include "bsp_usart_cfg.h"
 
 
-#define HFIC_LedInit()		BSP_LedInit()
+
+#define HFIC_LedInit()					BSP_LedInit()
 #define HFIC_LedSwitch(u16LedIdCpy,u8LedStatus)	BSP_LedSwitch(u16LedIdCpy,u8LedStatus)
 
 
-#define HFIC_KeyInit()		BSP_KeyInit()
+#define HFIC_KeyInit()					BSP_KeyInit()
 #define HFIC_enuKeyPress()	    BSP_CheckKeyState()
 
-#define Delay_ms(u32Msec)  BSP_Delay_ms(u32Msec)
-#define SysTick_Init()		 BSP_SysTickInit()
+
+#define HFIC_UsartInit()				BSP_UsartInit()
+
+
+#define Delay_ms(u32Msec)  			BSP_Delay_ms(u32Msec)
+#define SysTick_Init()		 			BSP_SysTickInit()
 #endif 

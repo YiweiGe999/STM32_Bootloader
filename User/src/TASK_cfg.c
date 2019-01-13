@@ -22,7 +22,7 @@ Func FUNC_aTaskName[NBR_enuTask] =
 const u16 Task_aTimeConfg[NBR_enuTask] = 
 {
 	PRIODS_enu10ms,
-	PRIODS_enu15ms,
+	PRIODS_enu10ms,
 
 };
 

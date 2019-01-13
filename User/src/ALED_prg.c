@@ -46,16 +46,18 @@ void ALED_vidTask(void)
 	if(Func_aStatus[BTN_enuSTATUS] == BTN_CLICK_ONCE)
 	{
 			Func_aStatus[LED_enuSTATUS]=ALED_enuLED0_ON ;
-			
+			printf("Click once,Turn on LED0!\n");
 	}
 	else if(Func_aStatus[BTN_enuSTATUS] == BTN_CLICK_TWICE)
 	{
 
 		Func_aStatus[LED_enuSTATUS]= ALED_enuLED1_ON ;
+		printf("Click twice,Turn on LED1!\n");
 	}
 	else if(Func_aStatus[BTN_enuSTATUS] == BTN_CLICK_LONG)
 	{
 		Func_aStatus[LED_enuSTATUS]= ALED_enuALL_ON ;
+		printf("Click long,Turn on all LED!\n");
 		
 
 	}
@@ -63,7 +65,7 @@ void ALED_vidTask(void)
 	{
 		//Func_aStatus[LED_enuSTATUS]= ALED_enuALL_OFF;
 	}
-
+	
 	ALED_vidWorkMode(Func_aStatus[LED_enuSTATUS]);
 }
 

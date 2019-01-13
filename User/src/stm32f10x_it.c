@@ -149,14 +149,7 @@ void SysTick_Handler(void)
 	
 }
  
-void EXTI4_IRQHandler(void)
-{
-	
-	#ifdef USE_EXTI_TRG_MORNITOR	
-	
-	#endif
-	
-}
+
 /******************************************************************************/
 /*                 STM32F10x Peripherals Interrupt Handlers                   */
 /*  Add here the Interrupt Handler for the used peripheral(s) (PPP), for the  */
@@ -180,5 +173,34 @@ void EXTI4_IRQHandler(void)
 /**
   * @}
   */ 
+
+void USART1_IRQHandler(void)
+{
+	u8 DATA;
+	if(USART_GetITStatus(USART1, USART_IT_RXNE) != RESET)
+	{	
+		DATA = USART_ReceiveData(USART1);
+		USART_ClearFlag(USART1, USART_IT_RXNE);
+		
+		//DATA = DATA ;
+	    /*---- EXTCOM <==> GPRS ----*/
+		USART_SendData(USART1,DATA);
+	}
+}
+
+void EXTI4_IRQHandler(void)
+{
+	
+	#ifdef USE_EXTI_TRG_MORNITOR	
+	
+	#endif
+	
+}
+
+
+
+
+
+
 
 /******************* (C) COPYRIGHT 2011 STMicroelectronics *****END OF FILE****/
