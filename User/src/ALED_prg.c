@@ -2,6 +2,8 @@
 #include "ALED_int.h"
 #include "AKEY_int.h"
 
+
+/* for git test */
 void ALED_vidInit(void)
 {
 	HFIC_LedInit();
